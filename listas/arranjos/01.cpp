@@ -23,6 +23,7 @@ void inserirNumeros(int numerosInseridos[]){
             while (num < 10 || num >100){
                 cout << "Você digitou errado. É entre 10 e 100:" << "\n:";
                 cin >> num;
+                cout << "\nnum >> " << num;
                 if (num > 10 && num < 100){
                     numerosInseridos[i] = num;
                 }
