@@ -11,10 +11,8 @@ e) 89, 87, 82, 79, 77, 70, 57, 52, 49, 42, 41, 33, 32
 
 using namespace std;
 
-int main(){
-    int vetor[] = {47, 89, 94, 33, 57};
-    int tamanho_vetor = 5, index, bolha, temp;
-    
+void ordenaBorbulhamento(int* vetor, int tamanho_vetor){
+    int index, bolha, temp;
     for(index = 0; index < tamanho_vetor; index++){
         for(bolha=tamanho_vetor-1; bolha > index; bolha--){
             if(vetor[bolha] < vetor[bolha-1]){
@@ -24,8 +22,19 @@ int main(){
             }
         }
     }
+}
 
-    for(int x: vetor){
-        cout << x << "\n";
+int showVetor(int* vetor, int tamanho_vetor){
+    cout << "e) ";
+    for(int i = 0; i < tamanho_vetor; i++){
+        cout << vetor[i] << " ";
     }
+    cout << "\n";
+}
+
+int main(){
+    int vetor[] = {89, 87, 82, 79, 77, 70, 57, 52, 49, 42, 41, 33, 32};
+    int tamanho_vetor = 13;
+    ordenaBorbulhamento(vetor, tamanho_vetor);
+    showVetor(vetor, tamanho_vetor);
 }
